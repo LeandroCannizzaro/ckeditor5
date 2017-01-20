@@ -1,5 +1,5 @@
 /**
- * @license Copyright (c) 2003-2016, CKSource - Frederico Knabben. All rights reserved.
+ * @license Copyright (c) 2003-2017, CKSource - Frederico Knabben. All rights reserved.
  * For licensing, see LICENSE.md.
  */
 
@@ -15,28 +15,6 @@ const ckeditor5Lint = require( '@ckeditor/ckeditor5-dev-lint' )();
 gulp.task( 'lint', ckeditor5Lint.lint );
 gulp.task( 'lint-staged', ckeditor5Lint.lintStaged );
 gulp.task( 'pre-commit', [ 'lint-staged' ] );
-
-// Development environment tasks. ---------------------------------------------
-
-const ckeditor5DevEnv = require( '@ckeditor/ckeditor5-dev-env' )( {
-	workspaceDir: '..'
-} );
-
-gulp.task( 'init', ckeditor5DevEnv.initRepository );
-gulp.task( 'create-package', ckeditor5DevEnv.createPackage );
-gulp.task( 'update', ckeditor5DevEnv.updateRepositories );
-gulp.task( 'pull', ckeditor5DevEnv.updateRepositories );
-gulp.task( 'status', ckeditor5DevEnv.checkStatus );
-gulp.task( 'st', ckeditor5DevEnv.checkStatus );
-gulp.task( 'relink', ckeditor5DevEnv.relink );
-gulp.task( 'install', ckeditor5DevEnv.installPackage );
-gulp.task( 'exec', ckeditor5DevEnv.execOnRepositories );
-
-// Translations ----------------------------------------------------------------
-
-gulp.task( 'translations:collect', ckeditor5DevEnv.collectTranslations );
-gulp.task( 'translations:upload', ckeditor5DevEnv.uploadTranslations );
-gulp.task( 'translations:download', ckeditor5DevEnv.downloadTranslations );
 
 // Documentation. -------------------------------------------------------------
 
@@ -68,3 +46,17 @@ function getTestOptions() {
 	return require( '@ckeditor/ckeditor5-dev-tests' )
 		.parseArguments( process.argv.slice( 2 ) );
 }
+
+// Translations ----------------------------------------------------------------
+
+gulp.task( 'translations:collect', () => {
+	return require( '@ckeditor/ckeditor5-dev-env' )( {} ).collectTranslations();
+} );
+
+gulp.task( 'translations:upload', () => {
+	return require( '@ckeditor/ckeditor5-dev-env' )( {} ).uploadTranslations();
+} );
+
+gulp.task( 'translations:download', () => {
+	return require( '@ckeditor/ckeditor5-dev-env' )( {} ).downloadTranslations();
+} );

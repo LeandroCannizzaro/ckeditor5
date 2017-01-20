@@ -1,5 +1,10 @@
 #!/usr/bin/env node
 
+/**
+ * @license Copyright (c) 2003-2017, CKSource - Frederico Knabben. All rights reserved.
+ * For licensing, see LICENSE.md.
+ */
+
 'use strict';
 
 const fs = require( 'fs' );
@@ -33,7 +38,7 @@ function fixCkeditorPaths( wholeImport, path ) {
 
 	return (
 		wholeImport.slice( 0, index ) +
-		'ckeditor5-' + pathChunks[1] + '/src/' + pathChunks.slice( 2 ).join( '/' ) +
+		'ckeditor5-' + pathChunks[ 1 ] + '/src/' + pathChunks.slice( 2 ).join( '/' ) +
 		wholeImport.slice( path.length + index )
 	);
 }
@@ -48,7 +53,7 @@ function fixTestPaths( wholeImport, path ) {
 
 	return (
 		wholeImport.slice( 0, index ) +
-		'ckeditor5-' + pathChunks[1] + '/tests/' + pathChunks.slice( 2 ).join( '/' ) +
+		'ckeditor5-' + pathChunks[ 1 ] + '/tests/' + pathChunks.slice( 2 ).join( '/' ) +
 		wholeImport.slice( path.length + index )
 	);
 }
