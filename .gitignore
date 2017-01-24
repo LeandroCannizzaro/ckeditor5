@@ -13,4 +13,6 @@ build/modules/**
 build/docs/**
 coverage/**
 packages/**
+sample/script.output.js
+sample/script.output.js.map
 lerna-debug.log

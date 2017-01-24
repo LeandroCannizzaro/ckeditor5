@@ -47,5 +47,8 @@
   "repository": {
     "type": "git",
     "url": "https://github.com/ckeditor/ckeditor5.git"
+  },
+  "scripts": {
+    "sample": "webpack sample/script.js sample/script.output.js --config sample/webpack.conf.js"
   }
 }
