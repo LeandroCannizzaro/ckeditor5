@@ -39,7 +39,7 @@ module.exports = {
 
 	plugins: [
 		new CKEditorWebpackPlugin( {
-			languages: [ 'pl', 'en' ]
+			languages: [ 'pl' ]
 		} )
 	],
 };

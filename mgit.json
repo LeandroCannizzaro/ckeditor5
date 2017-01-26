@@ -18,6 +18,6 @@
     "@ckeditor/ckeditor5-typing": "ckeditor/ckeditor5-typing",
     "@ckeditor/ckeditor5-ui": "ckeditor/ckeditor5-ui",
     "@ckeditor/ckeditor5-undo": "ckeditor/ckeditor5-undo",
-    "@ckeditor/ckeditor5-utils": "ckeditor/ckeditor5-utils"
+    "@ckeditor/ckeditor5-utils": "ckeditor/ckeditor5-utils#t/116"
   }
 }
