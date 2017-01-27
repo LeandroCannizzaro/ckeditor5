@@ -19,7 +19,6 @@ module.exports = {
 		filename: 'ckeditor.js',
 	},
 
-	// TODO is it possible to include that in the CKEditor plugin?
 	module: {
 		rules: [
 			{
@@ -41,5 +40,5 @@ module.exports = {
 		new CKEditorWebpackPlugin( {
 			languages: [ 'pl' ]
 		} )
-	],
+	]
 };
