@@ -1,5 +1,5 @@
 /**
- * @license Copyright (c) 2003-2016, CKSource - Frederico Knabben. All rights reserved.
+ * @license Copyright (c) 2003-2017, CKSource - Frederico Knabben. All rights reserved.
  * For licensing, see LICENSE.md.
  */
 
@@ -30,6 +30,12 @@ module.exports = {
 				// test: **/ckeditor5-*/theme/**/*.scss
 				test: /\.scss$/,
 				use: [ 'style-loader', 'css-loader', 'sass-loader' ]
+			},
+
+			// TODO: add loaders on the fly by the plugin.
+			{
+				test: /ckeditor5-[^/]+\/src\/.+\.js$/,
+				use: [ require.resolve( 'callback-loader' ) ]
 			}
 		]
 	},

@@ -23,8 +23,8 @@ gulp.task( 'docs', () => {
 		.build( {
 			readmePath: path.join( process.cwd(), 'README.md' ),
 			sourceFiles: [
-				process.cwd() + '/node_modules/ckeditor5-*/src/**/*.@(js|jsdoc)',
-				'!' + process.cwd() + '/node_modules/ckeditor5-*/src/lib/**/*.js'
+				process.cwd() + '/packages/ckeditor5-*/src/**/*.@(js|jsdoc)',
+				'!' + process.cwd() + '/packages/ckeditor5-*/src/lib/**/*.js'
 			],
 			destinationPath: path.join( process.cwd(), 'build', 'docs' )
 		} );
@@ -50,13 +50,13 @@ function getTestOptions() {
 // Translations ----------------------------------------------------------------
 
 gulp.task( 'translations:collect', () => {
-	return require( '@ckeditor/ckeditor5-dev-env' )( {} ).collectTranslations();
+	return require( '@ckeditor/ckeditor5-dev-env' ).collectTranslations();
 } );
 
 gulp.task( 'translations:upload', () => {
-	return require( '@ckeditor/ckeditor5-dev-env' )( {} ).uploadTranslations();
+	return require( '@ckeditor/ckeditor5-dev-env' ).uploadTranslations();
 } );
 
 gulp.task( 'translations:download', () => {
-	return require( '@ckeditor/ckeditor5-dev-env' )( {} ).downloadTranslations();
+	return require( '@ckeditor/ckeditor5-dev-env' ).downloadTranslations();
 } );
