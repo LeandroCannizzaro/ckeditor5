@@ -31,12 +31,6 @@ module.exports = {
 				test: /\.scss$/,
 				use: [ 'style-loader', 'css-loader', 'sass-loader' ]
 			},
-
-			// TODO: add loaders on the fly by the plugin.
-			{
-				test: /ckeditor5-[^/]+\/src\/.+\.js$/,
-				use: [ require.resolve( 'callback-loader' ) ]
-			}
 		]
 	},
 
